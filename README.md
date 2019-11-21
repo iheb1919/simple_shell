@@ -5,22 +5,22 @@ the shell is a program that takes commands from the keyboard and gives them to t
 In the old days, it was the only user interface available on a Unix-like system such as Linux.
 Nowadays, we have graphical user interfaces (GUIs) in addition to command line interfaces (CLIs) such as the shell.
 
-| ## List of functions and system calls |
+|  List of functions and system calls |
 | ------------------------------------- |
-| * access |
-| * chdir |
-| * close |
-| * malloc |
-| * strtok |
-| * wait |
-| * getline |
-| * free |
-| * fork |
-| * exit |
-| * env |
-| * perror |
-| * stat |
-| * write |
+|  access |
+|  chdir |
+|  close |
+|  malloc |
+|  strtok |
+|  wait |
+|  getline |
+|  free |
+|  fork |
+|  exit |
+|  env |
+|  perror |
+|  stat |
+|  write |
 
 ## Compilation
 the shell will be compiled this way:
