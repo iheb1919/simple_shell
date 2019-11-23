@@ -1,5 +1,4 @@
 # Simple Shell
-![alt text](https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Fchooseanycolor%2F128%2Fsh-128.png&imgrefurl=https%3A%2F%2Fwww.iconfinder.com%2Fsearch%2F%3Fq%3Dsh&docid=0qkgar_mj7vDnM&tbnid=yAq2CLEv3tYQ-M%3A&vet=1&w=128&h=128&bih=686&biw=1396&ved=2ahUKEwiq6qLM3IDmAhXT3J4KHZ7GBLoQxiAoBnoECAEQIw&iact=c&ictx=1)
 
 ## General info
 the shell is a program that takes commands from the keyboard and gives them to the operating system to perform.
