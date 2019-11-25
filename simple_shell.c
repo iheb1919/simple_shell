@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/wait.h>
+#include <header.h>
 /**
  * main - function that provide a simple unix line interpreter
  * @argc: input
@@ -47,6 +42,18 @@ printf("%s :No such file or directory\n", argv[0]);
 }
 else if (x > 0)
 wait(0);
+}
+if (strcmp(buffer, "exit\n") == 0)
+{
+free(buffer);
+free(tok);
+exit(1);
+}
+bf = getline(&buffer, &bufsize, stdin);
+if (bf == EOF)
+{
+write(STDOUT_FILENO, "\n", 1);
+exit(0);
 }
 return (1);
 }
