@@ -63,3 +63,6 @@ $
  Implement the env built-in, that prints the current environment
 * 7. What happens when you type ls -l in the shell 
 a blog post describing step by step what happens when you type ls -l and hit Enter in a shell
+## This file lists all individuals having contributed content to the repository
+Iheb Mejri <ihebmejri14@gmail.com>
+Emna Ben Hadj Messaoud <bhmemna7@gmail.com>
