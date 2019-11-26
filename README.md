@@ -16,11 +16,17 @@ Nowadays, we have graphical user interfaces (GUIs) in addition to command line i
 |  getline |
 |  free |
 |  fork |
-|  exit |
+|  _exit |
 |  env |
 |  perror |
 |  stat |
 |  write |
+|  kill |
+|  execve |
+|  opendir |
+|  signal |
+|  waitpid |
+|  read |
 
 ## Compilation
 the shell will be compiled this way:
