@@ -2,7 +2,7 @@
 /**
  * _cd - function that
  * @args: array of strings
- * Return:
+ * Return: 0 always
  */
 int _cd(char **args)
 {
@@ -22,7 +22,7 @@ return (1);
 /**
  * _help - function that
  * @args: array of strings
- * Return:
+ * Return: 0always
  */
 int _help(__attribute__((unused))char **args)
 {
@@ -32,15 +32,16 @@ return (1);
 /**
  * e_exit - function that
  * @args: array of strings
- * Return:
+ * Return: 0 always
  */
 int e_exit(__attribute__((unused))char **args)
 {
 return (0);
 }
 /**
-* _env - function that prints environ
-* Return: 1
+ * _env - function that prints environ
+ * @args: pointer to pointer
+ * Return: 1
 */
 int  _env(__attribute__((unused))char **args)
 {
