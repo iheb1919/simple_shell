@@ -13,11 +13,8 @@
 int main(int argc, char *argv[])
 {
 (void)argc;
-int T = 1;
-char *buf;
-char *env[2];
-int x, i, a;
-char *c, *token = NULL, *cmd, *path;
+int T = 1, x, i, a;
+char *buf, *env[2], *c, *token = NULL, *cmd, *path;
 size_t size = 500;
 buf = (char *)malloc(size * sizeof(char));
 c = (char *)malloc (size * sizeof(char));

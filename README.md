@@ -5,21 +5,28 @@ the shell is a program that takes commands from the keyboard and gives them to t
 In the old days, it was the only user interface available on a Unix-like system such as Linux.
 Nowadays, we have graphical user interfaces (GUIs) in addition to command line interfaces (CLIs) such as the shell.
 
-## List of functions and system calls:
-* access 
-* chdir
-* close
-* malloc
-* strtok
-* wait
-* getline
-* free
-* fork
-* exit
-* env
-* perror
-* stat
-* write
+|  List of functions and system calls |
+| ------------------------------------- |
+|  access |
+|  chdir |
+|  close |
+|  malloc |
+|  strtok |
+|  wait |
+|  getline |
+|  free |
+|  fork |
+|  _exit |
+|  env |
+|  perror |
+|  stat |
+|  write |
+|  kill |
+|  execve |
+|  opendir |
+|  signal |
+|  waitpid |
+|  read |
 
 ## Compilation
 the shell will be compiled this way:
@@ -62,3 +69,6 @@ $
  Implement the env built-in, that prints the current environment
 * 7. What happens when you type ls -l in the shell 
 a blog post describing step by step what happens when you type ls -l and hit Enter in a shell
+## This file lists all individuals having contributed content to the repository
+Iheb Mejri <ihebmejri14@gmail.com>
+Emna Ben Hadj Messaoud <bhmemna7@gmail.com>
