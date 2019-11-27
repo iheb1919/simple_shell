@@ -1,4 +1,9 @@
-#include <header.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 /**
  * main - function that provide a simple unix line interpreter
  * @argc: input
@@ -8,11 +13,8 @@
 int main(int argc, char *argv[])
 {
 (void)argc;
-int T = 1;
-char *buf;
-char *env[2];
-int x, i, a;
-char *c, *token = NULL, *cmd, *path;
+int T = 1, x, i, a;
+char *buf, *env[2], *c, *token = NULL, *cmd, *path;
 size_t size = 500;
 buf = (char *)malloc(size * sizeof(char));
 c = (char *)malloc (size * sizeof(char));
@@ -42,18 +44,6 @@ printf("%s :No such file or directory\n", argv[0]);
 }
 else if (x > 0)
 wait(0);
-}
-if (strcmp(buffer, "exit\n") == 0)
-{
-free(buffer);
-free(tok);
-exit(1);
-}
-bf = getline(&buffer, &bufsize, stdin);
-if (bf == EOF)
-{
-write(STDOUT_FILENO, "\n", 1);
-exit(0);
 }
 return (1);
 }
