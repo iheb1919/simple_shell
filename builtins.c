@@ -34,15 +34,16 @@ return (1);
  * @args: array of strings
  * Return:
  */
-int e_exit(__attribute__((unused))char **args){
-return 0;}
+int e_exit(__attribute__((unused))char **args)
+{
+return (0);
+}
 /**
 * _env - function that prints environ
 * Return: 1
 */
 int  _env(__attribute__((unused))char **args)
 {
-extern char **environ;
 int i;
 char *s = *environ;
 for (i = 1; s != NULL; i++)
@@ -50,5 +51,5 @@ for (i = 1; s != NULL; i++)
 printf("%s\n", s);
 s = environ[i];
 }
- return (1);
+return (1);
 }
