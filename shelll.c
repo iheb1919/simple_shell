@@ -7,17 +7,7 @@
 #include <stddef.h>
 #include <signal.h>
 #include <sys/stat.h>
-/**
- *
- *
- *
- */
-
-int exec(char *st, char *st2)
-{
-
-}
-
+extern char **environ;
 /**
  * _getline - function that get a line
  * @buffer: pointer to pointer
@@ -29,10 +19,8 @@ ssize_t _getline(char **buffer, size_t *bufsize, FILE *f)
 return (getdelim(buffer, bufsize, '\n', f));
 }
 /**
- * _getline - function that get a line
- * @buffer: pointer to pointer
- * @bufsize: pointer
- * @f: pointer
+ * sigintHandle - function that get a line
+ * @buffersig_num: int
 */
 void sigintHandler(int sig_num)
 {
@@ -78,7 +66,7 @@ return (result);
 char *_whichy(char *ch)
 {
 char *env, *tok, *p, *t[100];
-int i, k;
+int k;
 struct stat buf;
 
 env = getenv("PATH");
@@ -113,8 +101,8 @@ int main(void)
 char *buffer, *env;
 size_t bufsize = 64;
 pid_t p;
-char *argv[100], *tok;
-int i, status, j = 0, ex = 0;
+char *argv[100];
+int i, j = 0, ex = 0;
 signal(SIGINT, sigintHandler);
 buffer = (char *)malloc(bufsize * sizeof(char));
 if (buffer == NULL)

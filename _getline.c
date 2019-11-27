@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "holberton.h"
+#include "shell.h"
 #define BUFSIZE 1024
 /**
  * _getline - function that read line
