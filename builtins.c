@@ -6,22 +6,38 @@
  */
 int _cd(char **args)
 {
-  if (args[1] == NULL) {
-    fprintf(stderr, "lsh: expected argument to \"cd\"\n");
-  } else {
-    if (chdir(args[1]) != 0) {
-      perror("lsh");
-    }
-  }
-  return 1;
+if (args[1] == NULL)
+{
+fprintf(stderr, "lsh: expected argument to \"cd\"\n");
 }
-int _help(__attribute__((unused))char **args){printf("HELLOWORD\n");
-  return (1);}
+else
+{
+if (chdir(args[1]) != 0)
+{
+perror("error:");
+}
+}
+return (1);
+}
+/**
+ * _help - function that
+ * @args: array of strings
+ * Return:
+ */
+int _help(__attribute__((unused))char **args)
+{
+printf("HELLOWORD\n");
+return (1);
+}
+/**
+ * e_exit - function that
+ * @args: array of strings
+ * Return:
+ */
 int e_exit(__attribute__((unused))char **args){
-
 return 0;}
 /**
-* print_env - function that prints environ
+* _env - function that prints environ
 * Return: 1
 */
 int  _env(__attribute__((unused))char **args)
