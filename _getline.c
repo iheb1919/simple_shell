@@ -1,0 +1,54 @@
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "holberton.h"
+#define BUFSIZE 1024
+/**
+ * _getline - function that read line
+ *
+ * Return: 0 always
+ */
+char *_getline()
+{
+int bufsize = BUFSIZE;
+int position = 0;
+char *buffer = malloc(sizeof(char) * bufsize);
+int c;
+if (!buffer)
+{
+fprintf(stderr, "lsh: allocation error\n");
+exit(EXIT_FAILURE);
+}
+while (1)
+{
+c = getchar();
+if (c == EOF)
+{
+exit(1);
+}
+else if (c == '\n')
+{
+buffer[position] = '\0';
+return (buffer);
+}
+else
+{
+buffer[position] = c;
+}
+position++;
+if (position >= bufsize)
+{
+bufsize += BUFSIZE;
+buffer = realloc(buffer, bufsize);
+if (!buffer)
+{
+printf("error: allocation error\n");
+exit(0);
+}
+}
+}
+return (buffer);
+}
